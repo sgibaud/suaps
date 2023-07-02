@@ -1,0 +1,276 @@
+@import url("https://use.typekit.net/oqj1wts.css");
+/* variables */
+:root {
+  --dom-size: 1rem;
+  --dom: 100vw;
+  --size: 1em;
+  --font-family: "raleway", sans-serif;
+  --green_hard: #025159;
+  --green_hard_opacity: rgba(2, 81, 89, 0.3);
+  --green_light: #038c8c;
+  --green_blue: #45718c;
+  --brown_light: #bf9a78;
+  --brown_hard: #8c452b;
+  --grey: #cccccc;
+  --white: #ffffff;
+  --white_opacity: rgba(255, 255, 255, 0.8);
+}
+
+/* css global */
+* {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+nav,
+main,
+header,
+.col_5,
+.col_2,
+.align_column,
+.align_row,
+.align_article,
+.mask1,
+.top_image,
+.nav_back {
+  display: flex;
+}
+
+main,
+header {
+  flex-direction: column;
+}
+
+main,
+.main {
+  /* width: 60vw; */
+  width: calc(60 * var(--dom-size));
+  margin: 0 auto;
+  justify-content: center;
+  /* padding-bottom: calc(3 * var(--dom-size)); */
+}
+
+body .fc {
+  font-size: calc(0.7 * var(--size));
+}
+
+/* header */
+header {
+  min-height: calc(30.25 * var(--size));
+  padding-top: calc(2.5 * var(--dom-size));
+  margin-bottom: calc(6 * var(--size));
+}
+
+h1 {
+  color: var(--green_hard);
+  font-size: calc(2.75 * var(--dom-size));
+  opacity: 1 !important;
+}
+
+.intro {
+  color: var(--green_hard);
+  margin-top: calc(0.55 * var(--size));
+  font-size: var(--dom-size);
+  opacity: 1 !important;
+}
+
+/* nav */
+nav {
+  width: 78vw;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+nav a:first-child {
+  margin-right: var(--size);
+}
+
+.wave {
+  background: var(--green_blue);
+}
+
+/* width */
+body {
+  /* width: calc(100 * var(--dom-size)); */
+  width: var(--dom);
+}
+
+footer {
+  padding-bottom: calc(2 * var(--dom-size));
+  background-color: var(--green_light);
+}
+
+#align_right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50%;
+  width: calc(23.625 * var(--size));
+  margin-top: calc(8 * var(--size));
+  background-color: var(--white);
+  opacity: 0.85;
+  padding: calc(0.75 * var(--size));
+}
+
+.align_column {
+  flex-direction: column;
+}
+
+.align_row {
+  flex-direction: row;
+}
+
+.align_center {
+  justify-content: center;
+}
+
+.margin-top {
+  margin-top: calc(3.5 * var(--size)) !important;
+}
+
+.padding {
+  padding: calc(0.7 * var(--size));
+}
+
+.margin_right_left_logo {
+  margin: 0 calc(2.5 * var(--size));
+}
+
+.margin_right_left {
+  margin: 0 calc(0.5 * var(--size));
+}
+
+.margin-bottom {
+  margin-bottom: calc(1.25 * var(--size));
+}
+
+.margin_auto {
+  margin: 0 auto;
+}
+
+.align_space {
+  justify-content: space-between;
+}
+
+/* other */
+.fc .fc-button:focus,
+.fc .fc-button-primary:focus {
+  box-shadow: none;
+}
+
+#barre {
+  max-width: calc(15 * var(--size));
+  margin: calc(0.75 * var(--size)) auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--green_hard);
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--white);
+  background-color: var(--green_hard_opacity);
+}
+
+/* image and icon */
+#logo {
+  max-width: calc(20 * var(--size));
+}
+
+/* mask */
+.mask1 {
+  -webkit-mask-image: url("../img/bande.svg");
+  mask-image: url("../img/bande.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: top;
+  mask-position: top;
+  -webkit-mask-size: calc(210 * var(--size));
+  mask-size: calc(210 * var(--size));
+}
+
+.top_image {
+  position: absolute;
+  z-index: -1000;
+  top: calc(-1 * var(--size));
+  /* height: calc(70 * var(--size)); */
+  object-position: 0 calc(-16 * var(--size));
+  object-fit: fill;
+}
+
+.top_image_2 {
+	position: absolute;
+	z-index: -1000;
+	top: calc(-1 * var(--size));
+	/* height: calc(70 * var(--size)); */
+	object-position: 0 calc(-30 * var(--size));
+	object-fit: fill;
+  }
+
+/* calendar */
+.fc .fc-button-primary {
+  background-color: var(--green_blue);
+  border-color: var(--green_hard);
+}
+
+.fc .fc-button-primary:hover {
+  background-color: var(--green_light);
+  border-color: var(--green_hard);
+}
+
+.fc .fc-button:disabled {
+  opacity: 0.35;
+}
+
+/* FOOTER */
+p,
+pre {
+  font-size: calc(0.75 * var(--size));
+}
+pre a {
+  font-weight: 300;
+}
+
+.p_condition {
+  font-size: calc(0.5 * var(--size));
+}
+
+h5 {
+  font-size: calc(0.8 * var(--dom-size));
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: calc(0.15 * var(--size));
+}
+
+.color_footer {
+  background-color: var(--green_hard);
+}
+
+.footer {
+  width: calc(59 * var(--dom-size));
+  margin: 0 auto;
+  padding: 0 calc(1.1 * var(--dom-size));
+}
+
+footer {
+  padding-bottom: calc(2 * var(--dom-size));
+  background-color: var(--green_blue);
+}
+
+.color_white {
+  color: var(--white);
+}
+
+.padding {
+  padding: calc(0.7 * var(--size));
+}
+
+.img_hiking_1 {
+  width: 100%;
+}
